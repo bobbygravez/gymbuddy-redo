@@ -1,0 +1,143 @@
+
+*{
+    box-sizing: border-box;
+}
+
+/* typography */
+p, span{
+    margin-top: 0;
+    margin-bottom: .3rem;
+}
+
+.name, .Dm{
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.role{
+    font-weight: 500;
+    font-size: .9rem;
+    color:#9CA3AD;
+}
+
+.profile{
+    color: #F7E68D;
+    margin-left: 5%;
+    font-size: .9rem;
+}
+
+
+span{
+    font-size: .8rem;
+}
+
+.all-online p{
+    color: #9CA3AD;
+    font-size: .9rem;
+    font-weight: 700;
+    width: 20%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.current{
+    color: #F7E68D;
+    border-bottom: 3px solid #F7E68D;
+}
+
+
+/* layout */
+
+.instructor-header{
+    display: flex;
+    gap: 3%;
+    justify-content: flex-start;
+}
+
+.description{
+    margin-top: -3px;
+}
+
+.fa-chevron-left{
+    color: #FFFFFF;
+    margin-right: 4%;
+}
+
+.all-online{
+    margin-top: 1.3rem;
+    display: flex;
+    background: #2F3035;
+    box-sizing: content-box;
+    padding: 0 .7rem;
+     margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    overflow-x: none;
+}
+
+.search-bar-container{
+    position: relative;
+}
+.search-bar{
+    margin-top: 1.5rem;
+    width: 100%;
+    background-color: #38393E;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .9rem 0 .9rem 3.5rem;
+}
+
+.search-bar:focus{
+    border: 1px solid #ffffff;
+}
+
+.fa-magnifying-glass{
+    color: #9CA3AD;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 51%;
+    left: 5%;
+    z-index: 1;
+    margin: 0 10% 0 0;
+}
+
+.fa-magnifying-glass:hover{
+    color: #F7E68D;
+}
+
+.instructors-container{
+    margin: 1.5rem 0;
+}
+
+.instructors-info{
+    display: flex;
+    gap:3%;
+    align-items: flex-start;
+}
+
+.CTA{
+    margin-top: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap:3%;
+}
+
+.online-container{
+    position: relative;
+}
+
+.online{
+    position: absolute;
+    right: 20%;
+    bottom: 5%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #20DB49;
+}
+
+.instructors-icon{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+

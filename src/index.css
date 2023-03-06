@@ -1,0 +1,421 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #212226;
+    font-family: 'Inter', sans-serif;
+}
+
+/* typography */
+
+p{
+    color: #ffffff;
+}
+
+h6{
+    color: #9CA3AD;
+    margin: 0;
+    text-align: center;
+}
+
+.side-info h6{
+    text-align: left;
+}
+
+h5{
+    font-weight: 700;
+    color:#FFFFFF;
+    margin-top: 0;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 1rem;
+    color: #9CA3AD;
+    margin-top: 1.5rem;
+}
+
+h2{
+    color: #ffffff;
+}
+
+h1{
+    color: #F7E68D;
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.7em;
+}
+
+span{
+    font-weight: 400;
+    color: #9CA3AD;
+}
+
+.fa-chevron-right{
+    color: #9CA3AD;
+    margin: 0 1px;
+}
+
+.fa-angle-left{
+    color: #9CA3AD;
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+.welcome-text{
+    text-align: center;
+}
+
+.alignLeft{
+    margin-left: auto;
+    color: #ffffff;
+}
+
+.sameWidth{
+    width: 15%;
+}
+
+.intro-text{
+    margin-bottom: 3rem;
+}
+
+.content p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.content h3{
+    font-size: 1.3rem;
+    color: #F7E68D;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer h6{
+    margin-top: .5rem
+}
+
+.level-stage p, .level-stage span{
+    margin: 5px 0;
+}
+
+.level-stage span{
+    font-size: .8rem;
+}
+
+.level-stage p{
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.message-container p, .message-container h5{
+    margin-top: 0;
+    margin-bottom: .3rem;
+}
+
+.message-container h5{
+    font-weight: 400;
+    font-size: .75rem;
+    color: #9CA3AD;
+    margin-top: .3rem;
+    margin-right: 1rem;
+}
+
+.message-container p{
+    font-size: .9rem;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.name-time span{
+    display: block;
+    color: #9CA3AD;
+    font-size: .9rem;
+    font-weight: 300;
+}
+
+.group-dm{
+    margin-top: 1.5rem;
+}
+
+.group-dm h3{
+    margin: 0;
+}
+
+.fa-plus{
+    margin-left: auto;
+}
+
+
+/* layout */
+.login-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .6rem;
+}
+
+.home-page{
+    width: 100vw;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 90%;
+}
+
+input, .register{
+    padding: .6rem .9rem;
+    outline: none;
+    border-radius: .4rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+input:focus{
+    outline: 3px solid #F7E68D;
+    background-color: #f5f5f5;
+}
+
+.register{
+    font-weight: 700;
+    background-color: #F7E68D;
+}
+
+.register:focus{
+   opacity: 0.8;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background: #2F3035;
+    gap: 1rem;
+    padding: .7rem 1rem;
+    z-index: 1000;
+    height: 13vh;
+}
+
+.logo{
+    width: 4rem;
+}
+
+.menu-icon{
+    width: 2rem;
+    margin-left: auto;
+    background: #2F3035;
+    animation-duration: .7s;  
+}
+
+.landing-page, .instructor{
+    padding: 0 1.5rem;
+}
+
+.container{
+    position: relative;
+    margin-top: 16vh;
+    padding-top: 1rem;
+    padding-bottom: 16vh;
+}
+
+.content{
+    width: 100%;
+    padding: .5rem 1rem;
+    background: #2F3035;
+    margin: 0 auto;
+    border-radius: .5rem;
+    margin-top: 2rem;
+}
+
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #212226;
+    padding: 0 1rem;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.footer-icon{
+    font-size: 1.5rem;
+    color: #9CA3AD;
+}
+
+.footer-icon-container{
+    padding: 1rem 0;
+    text-align: center;
+    width: 20vw;
+}
+
+.footer-icon-container:hover{
+    border-top: 3px solid #F7E68D;
+}
+
+/* .footer-active{
+    border-top: 3px solid #F7E68D;
+} */
+
+/* sidebar */
+.side-container{
+    display: flex;
+}
+.sidebar{
+    position: fixed;
+    width: 23.6%;
+    height: 87vh;
+    top: 13vh;
+    left: 0;
+    background: #38393E;
+    margin-left: -23.6%;
+    transition: all .5s ease-in-out;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    z-index: 500;
+
+}
+
+.side-info{
+    position: fixed;
+    background-color: #2F3035;
+    height: 87vh;
+    width: 63%;
+    top: 13vh;
+    left: 23.5%;
+    margin-bottom: 16vh;
+    transition: all .5s ease-in-out;
+    padding: 1.3rem 1rem;
+    overflow-y: scroll;
+    padding-bottom: 16vh;
+    box-shadow: 0 1px 3px #ffffff;
+}
+
+.side-info-heading,.message-container{
+    display: flex;
+}
+
+.side-icons{
+    width: 1.7rem;
+    box-sizing: content-box;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #212226;
+    margin: 0 auto;
+}
+
+.side-icons:hover{
+    border: 3px solid #F7E68D;
+    background-color: #38393E;
+}
+
+.icon-container{
+    text-align: center;
+    width: 100%;
+}
+
+.icon-container:hover{
+    border-left: 4px solid #F7E68D;
+}
+
+.level-content{
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .4rem;
+    border-radius: 6px;
+}
+
+.level-content:hover,
+.level-content:focus,
+.message-container:hover,
+.message-container:focus{
+    background: #212226;
+}
+
+.messages{
+    margin-top: 1rem;
+    margin-left: -.5rem;
+}
+.message-container{
+    margin: .8rem 0;
+    padding: .3rem .6rem;
+}
+.message-icon,.message-box{
+    align-self: flex-start;
+    margin-right: .5rem;
+}
+
+.name-time{
+    display: flex;
+    /* gap: 4rem; */
+}
+
+.message-box{
+    width: 100%;
+    position: relative;
+}
+
+.verified{
+    margin-left: 5px;
+    margin-bottom: -2px;
+}
+
+.emoji{
+    margin-bottom: -3px; 
+}
+
+.group-dm{
+    display: flex;
+    width: 100%;
+    gap: 5%;
+    align-items: center;
+    padding: .3rem 1.2rem;
+    margin-left: -.9rem;
+}
+
+.group-icon{
+   color:#9CA3AD; 
+}
+
+.message-number{
+    color: #ffffff;
+    background-color: #F3746E;
+    padding: .1rem .3rem;
+    border-radius: 50%;
+    font-size: 10px;
+    position: absolute;
+    top: 55%;
+    left: 90%;
+}
+
+
+
+
+@keyframes swipeIcon {
+    0%{
+        opacity: 0;
+    }
+
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
