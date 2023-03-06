@@ -183,7 +183,7 @@ input, .register{
 }
 
 input:focus{
-    outline: 3px solid #F7E68D;
+    border: 3px solid #F7E68D;
     background-color: #f5f5f5;
     border-radius: .4rem;
 }
