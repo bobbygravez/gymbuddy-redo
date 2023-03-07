@@ -10,7 +10,13 @@ import Community from './community'
 
 function App() {
   const [isRegisterd, setIsRegistered] = useState(false)
-  const [username, setUsername] = useState('')
+
+  const [formData, setFormData] = useState({
+        username: "",
+        email: "",
+        password: ""
+  })
+
   const [isLoading, setIsLoading] = useState(false)
   const [isToggled, setIsToggled] = useState(false)
   const [sidebarOptions, setSidebarOptions] = useState(false)
@@ -82,19 +88,23 @@ function App() {
   }
 
   function handleChange(e){
-    setUsername(e.target.value)
+    const {name, value} = e.target
+    setFormData(prevState => ({
+      ...prevState,
+        [name] : value
+    }))
   }
 
   return (
     <div className='home-page'>
-      {!isRegisterd && <LoginPage loading={isLoading} register={register} handleChange={handleChange}/>}
+      {!isRegisterd && <LoginPage loading={isLoading} register={register} handleChange={handleChange} formData={formData}/>}
       {isRegisterd && 
         <section>
               <Header isToggled={isToggled} toggle={toggle} home={home}/>
           <div className='container'>
-              {page === "home" && <LandingPage username={username} closeSideBar={closeSideBar}/>}
+              {page === "home" && <LandingPage username={formData.username} closeSideBar={closeSideBar}/>}
               {page === "instructor" && <Instructor instructorStage={instructorStage} closeSideBar={closeSideBar}/>}
-              {page === "community" && <Community instructorStage={instructorStage} closeSideBar={closeSideBar} username={username}/>}
+              {page === "community" && <Community instructorStage={instructorStage} closeSideBar={closeSideBar} username={formData.username}/>}
               <div className='side-container'>
                 <SideBar isToggled={isToggled} displaySideBarOptions1={displaySideBarOptions1} displaySideBarOptions2={displaySideBarOptions2} displaySideBarOptions3={displaySideBarOptions3} home={home} closeSideBarOptions={closeSideBarOptions}/>
                 <SideInfo sidebarOptions={sidebarOptions} gymLevel={gymLevel} closeSideBarOptions={closeSideBarOptions} instructor={instructor} community={community} trainingStage={trainingStage}/>

@@ -113,6 +113,15 @@ span{
     font-weight: 700;
 }
 
+.fill-prompt{
+    color: #F3746E;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top:0 ;
+    font-weight: 700;
+}
+
 .message-container p, .message-container h5{
     margin-top: 0;
     margin-bottom: .3rem;
@@ -195,6 +204,10 @@ input:focus{
 
 .register:focus{
    opacity: 0.8;
+}
+
+button:disabled{
+    opacity: 0.6;
 }
 
 nav{
